@@ -36,24 +36,26 @@
       <div>
         <el-divider content-position="left">权限</el-divider>
         <el-checkbox-group v-model="checkList">
-          <el-checkbox label="复选框sdsd A"></el-checkbox>
-          <el-checkbox label="复选框 B"></el-checkbox>
-          <el-checkbox label="复选框 C"></el-checkbox>
-          <el-checkbox label="复选sdsd框 A"></el-checkbox>
-          <el-checkbox label="复选框 B"></el-checkbox>
-          <el-checkbox label="复选sdsd框 C"></el-checkbox>
-          <el-checkbox label="复选框 A"></el-checkbox>
-          <el-checkbox label="复选sds框 B"></el-checkbox>
-          <el-checkbox label="复选框 C"></el-checkbox>
-          <el-checkbox label="复选sds框 A"></el-checkbox>
-          <el-checkbox label="复选框 B"></el-checkbox>
-          <el-checkbox label="复选dsd框 C"></el-checkbox>
-          <el-checkbox label="复选框sdsd A"></el-checkbox>
-          <el-checkbox label="复选框 B"></el-checkbox>
-          <el-checkbox label="复选框 C"></el-checkbox>
-          <el-checkbox label="复选ds框 A"></el-checkbox>
-          <el-checkbox label="复选框 B"></el-checkbox>
-          <el-checkbox label="复选框 C"></el-checkbox>
+          <el-checkbox label="用户管理"></el-checkbox>
+          <el-checkbox label="角色管理"></el-checkbox>
+          <el-checkbox label="组织管理"></el-checkbox>
+          <el-checkbox label="绩效指标"></el-checkbox>
+          <el-checkbox label="全部绩效指标"></el-checkbox>
+          <el-checkbox label="报表"></el-checkbox>
+          <el-checkbox label="个人绩效目标"></el-checkbox>
+          <el-checkbox label="发布任务"></el-checkbox>
+          <el-checkbox label="审核发布"></el-checkbox>
+          <el-checkbox label="任务列表"></el-checkbox>
+          <el-checkbox label="绩效审核(高)"></el-checkbox>
+          <el-checkbox label="绩效审核(低)"></el-checkbox>
+          <el-checkbox label="绩效列表"></el-checkbox>
+          <el-checkbox label="申诉"></el-checkbox>
+          <el-checkbox label="申诉审核"></el-checkbox>
+          <el-checkbox label="申诉列表"></el-checkbox>
+          <el-checkbox label="绩效计划"></el-checkbox>
+          <el-checkbox label="计划列表"></el-checkbox>
+          <el-checkbox label="计划处理列表"></el-checkbox>
+          <el-checkbox label="统计报表"></el-checkbox>
         </el-checkbox-group>
       </div>
       <span slot="footer" class="dialog-footer">
@@ -103,6 +105,7 @@ export default {
     cancel() {
       this.isadd = false;
       this.ismod = false;
+      this.checkList = [];
     }
   }
 };
@@ -131,6 +134,6 @@ export default {
   margin: 20px;
 }
 .el-checkbox {
-  margin: 7px;
+  margin: 9px;
 }
 </style>

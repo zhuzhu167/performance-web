@@ -4,6 +4,7 @@
       <el-aside width="200px" style="background-color: #6a60a9">
         <div class="user-img">
           <i class="el-icon-user-solid"></i>
+          <p class="person">管理员</p>
         </div>
         <el-menu router :default-active="$route.path">
           <el-submenu index="1">
@@ -40,7 +41,7 @@
 
       <el-container>
         <el-header style="text-align: right; font-size: 12px">
-          <span @click="tuichu()">退出</span>
+          <span class="out" @click="tuichu()">退出</span>
         </el-header>
 
         <el-main>
@@ -116,18 +117,21 @@ export default {
 .el-menu-item.is-active {
   color: #000;
   background-color: #fff;
+  text-align: right;
 }
 .user-img {
   font-size: 60px;
   text-align: center;
   color: #fff;
-  padding: 30px;
   border: #fff;
+  margin-top: 20px;
+}
+.person {
+  font-size: 15px;
+}
+
+.out {
+  cursor: pointer;
 }
 </style>
 
-<style scoped>
-.index {
-  height: 100%;
-}
-</style>

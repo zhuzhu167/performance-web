@@ -108,10 +108,17 @@ export default {
           data: "梁柱"
         }
       ],
+      options: [
+        {
+          value: 1,
+          label: "未知"
+        }
+      ],
       isadd: false,
       ismod: false,
       iscomf: false,
-      msg: ""
+      msg: "",
+      value: ""
     };
   },
   methods: {

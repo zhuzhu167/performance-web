@@ -105,6 +105,22 @@ export default {
         {
           value: "1",
           label: "管理员"
+        },
+        {
+          value: "2",
+          label: "项目经理"
+        },
+        {
+          value: "3",
+          label: "组长"
+        },
+        {
+          value: "4",
+          label: "组员"
+        },
+        {
+          value: "5",
+          label: "实习"
         }
       ],
       value: "",
@@ -127,6 +143,7 @@ export default {
     cancel() {
       this.isadd = false;
       this.ismod = false;
+      this.value = "";
     }
   }
 };

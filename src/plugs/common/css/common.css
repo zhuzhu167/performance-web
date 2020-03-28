@@ -49,7 +49,7 @@
 }
 
 .input-item .el-input {
-  width: calc(100% - 90px) !important;
+  width: calc(100% - 90px);
 }
 
 .el-select .el-input {

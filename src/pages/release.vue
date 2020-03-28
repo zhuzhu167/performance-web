@@ -51,11 +51,11 @@
       <div class="input-list">
         <div class="input-item">
           <label class="title">开始时间</label>
-          <el-date-picker type="date" placeholder="选择日期" style="width: 100%;"></el-date-picker>
+          <el-date-picker type="date" placeholder="选择日期"></el-date-picker>
         </div>
         <div class="input-item">
           <label class="title">结束时间</label>
-          <el-date-picker type="date" placeholder="选择日期" style="width: 100%;"></el-date-picker>
+          <el-date-picker type="date" placeholder="选择日期"></el-date-picker>
         </div>
       </div>
       <span slot="footer" class="dialog-footer">
@@ -92,7 +92,8 @@ export default {
           value: 1,
           label: "未知"
         }
-      ]
+      ],
+      value: ""
     };
   },
   methods: {

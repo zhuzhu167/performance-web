@@ -73,13 +73,25 @@ export default {
       options: [
         {
           value: "1",
-          label: "管理员"
+          label: "当前为最上级"
+        },
+        {
+          value: "2",
+          label: "天鹿"
+        },
+        {
+          value: "3",
+          label: "ecp平台事业部"
+        },
+        {
+          value: "4",
+          label: "gris事业部"
         }
       ],
-      value: "",
       isadd: false,
       ismod: false,
       iscomf: false,
+      value: "",
       msg: ""
     };
   },
@@ -96,6 +108,7 @@ export default {
     cancel() {
       this.isadd = false;
       this.ismod = false;
+      this.value = "";
     }
   }
 };
