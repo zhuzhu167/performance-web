@@ -1,6 +1,14 @@
 <template>
   <div>
-    <el-dialog :title="msg" :visible.sync="ismod" width="50%" center>
+    <el-dialog
+      :title="msg"
+      :visible.sync="ismod"
+      width="50%"
+      center
+      :before-close="cancel"
+      :close-on-click-modal="false"
+      :close-on-press-escape="false"
+    >
       <div class="input-list">
         <div class="input-item">
           <label class="title">任务</label>
