@@ -139,7 +139,7 @@
       </tr>
       <tr>
         <td>关键事件加减分项</td>
-        <td>请填写部门考核指标</td>
+        <td></td>
         <td colspan="7"></td>
         <td></td>
         <td></td>
