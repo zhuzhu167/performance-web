@@ -16,7 +16,7 @@
         <el-table-column prop="data" label="提交上级审核"></el-table-column>
         <el-table-column label="操作" fixed="right" width="305">
           <template slot-scope="scope">
-            <el-button size="mini" type="primary">查看</el-button>
+            <el-button size="mini" type="primary" @click="openreport()">查看</el-button>
             <el-button size="mini" type="success">提交</el-button>
             <el-button size="mini" type="warning">不通过</el-button>
             <el-button size="mini" type="danger" @click="ismod = true">修改</el-button>
@@ -43,9 +43,13 @@
         <el-button type="primary" @click="ismod = false">提交</el-button>
       </span>
     </el-dialog>
+    <el-dialog title="报表" :visible.sync="isreport" width="80%" center top="20px">
+      <report></report>
+    </el-dialog>
   </div>
 </template>
 <script>
+import report from "@/components/report";
 export default {
   data() {
     return {
@@ -58,6 +62,7 @@ export default {
       isadd: false,
       ismod: false,
       iscomf: false,
+      isreport: false,
       msg: ""
     };
   },
@@ -74,7 +79,13 @@ export default {
     cancel() {
       this.isadd = false;
       this.ismod = false;
+    },
+    openreport() {
+      this.isreport = true;
     }
+  },
+  components: {
+    report
   }
 };
 </script>

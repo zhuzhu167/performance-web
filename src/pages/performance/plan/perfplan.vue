@@ -14,7 +14,7 @@
         <el-table-column label="操作" fixed="right" width="180">
           <template slot-scope="scope">
             <el-button size="mini" type="success" @click="mod('定制计划')">定制计划</el-button>
-            <el-button size="mini" type="primary" @click="iscomf = true">查看</el-button>
+            <el-button size="mini" type="primary" @click="openreport()">查看</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -40,9 +40,13 @@
         <el-button type="primary" @click="ismod = false">提交</el-button>
       </span>
     </el-dialog>
+    <el-dialog title="报表" :visible.sync="isreport" width="80%" center top="20px">
+      <report></report>
+    </el-dialog>
   </div>
 </template>
 <script>
+import report from "@/components/report";
 export default {
   data() {
     return {
@@ -55,6 +59,7 @@ export default {
       isadd: false,
       ismod: false,
       iscomf: false,
+      isreport: false,
       msg: ""
     };
   },
@@ -71,7 +76,13 @@ export default {
     cancel() {
       this.isadd = false;
       this.ismod = false;
+    },
+    openreport() {
+      this.isreport = true;
     }
+  },
+  components: {
+    report
   }
 };
 </script>

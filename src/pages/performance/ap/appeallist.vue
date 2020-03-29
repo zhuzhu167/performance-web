@@ -14,7 +14,7 @@
         <el-table-column prop="data" label="审核状态"></el-table-column>
         <el-table-column label="操作" fixed="right" width="80">
           <template slot-scope="scope">
-            <el-button size="mini" type="primary">查看</el-button>
+            <el-button size="mini" type="primary" @click="openreport()">查看</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -26,9 +26,13 @@
       layout="prev, pager, next"
       :total="200"
     ></el-pagination>
+    <el-dialog title="报表" :visible.sync="isreport" width="80%" center top="20px">
+      <report></report>
+    </el-dialog>
   </div>
 </template>
 <script>
+import report from "@/components/report";
 export default {
   data() {
     return {
@@ -37,8 +41,17 @@ export default {
           id: "123",
           data: "梁柱"
         }
-      ]
+      ],
+      isreport: false
     };
+  },
+  methods: {
+    openreport() {
+      this.isreport = true;
+    }
+  },
+  components: {
+    report
   }
 };
 </script>
