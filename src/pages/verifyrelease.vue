@@ -76,15 +76,15 @@
       <div class="input-list">
         <div class="input-item">
           <label class="title">开始时间</label>
-          <el-date-picker type="date" placeholder="选择日期" disabled style="width: 100%;"></el-date-picker>
+          <el-date-picker type="date" placeholder="选择日期" disabled></el-date-picker>
         </div>
         <div class="input-item">
           <label class="title">结束时间</label>
-          <el-date-picker type="date" placeholder="选择日期" disabled style="width: 100%;"></el-date-picker>
+          <el-date-picker type="date" placeholder="选择日期" disabled></el-date-picker>
         </div>
       </div>
       <span slot="footer" class="dialog-footer">
-        <el-button type="success">模板</el-button>
+        <el-button type="success" @click="openreport()">模板</el-button>
         <el-button @click="cancel()">取 消</el-button>
         <el-button type="primary" @click="ismod = false">提交</el-button>
       </span>
@@ -96,9 +96,13 @@
         <el-button type="warning" @click="iscomf = false">确 定</el-button>
       </span>
     </el-dialog>
+    <el-dialog title="报表" :visible.sync="isreport" width="80%" center top="20px">
+      <report></report>
+    </el-dialog>
   </div>
 </template>
 <script>
+import report from "../components/report";
 export default {
   data() {
     return {
@@ -117,6 +121,7 @@ export default {
       isadd: false,
       ismod: false,
       iscomf: false,
+      isreport: false,
       msg: "",
       value: ""
     };
@@ -134,7 +139,13 @@ export default {
     cancel() {
       this.isadd = false;
       this.ismod = false;
+    },
+    openreport() {
+      this.isreport = true;
     }
+  },
+  components: {
+    report
   }
 };
 </script>

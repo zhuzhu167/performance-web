@@ -29,7 +29,9 @@
     <el-dialog title="定制计划" :visible.sync="ismod" width="50%" center>
       <div class="input-list">
         <div class="input-item">
-          <label class="title">计划</label>
+          <div class="item-textarea-label">
+            <label class="title">计划</label>
+          </div>
           <el-input type="textarea" placeholder="请输入内容"></el-input>
         </div>
       </div>

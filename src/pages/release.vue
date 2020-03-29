@@ -51,11 +51,11 @@
       <div class="input-list">
         <div class="input-item">
           <label class="title">开始时间</label>
-          <el-date-picker type="date" placeholder="选择日期"></el-date-picker>
+          <el-date-picker v-model="time1" type="date" placeholder="选择日期"></el-date-picker>
         </div>
         <div class="input-item">
           <label class="title">结束时间</label>
-          <el-date-picker type="date" placeholder="选择日期"></el-date-picker>
+          <el-date-picker v-model="time2" type="date" placeholder="选择日期"></el-date-picker>
         </div>
       </div>
       <span slot="footer" class="dialog-footer">
@@ -83,17 +83,19 @@ export default {
           data: "梁柱"
         }
       ],
-      isadd: false,
-      ismod: false,
-      iscomf: false,
-      msg: "",
       options: [
         {
           value: 1,
           label: "未知"
         }
       ],
-      value: ""
+      isadd: false,
+      ismod: false,
+      iscomf: false,
+      msg: "",
+      value: "",
+      time1: "",
+      time2: ""
     };
   },
   methods: {

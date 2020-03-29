@@ -16,7 +16,7 @@
       <el-button class="reflash" type="warning" icon="el-icon-refresh" circle></el-button>
     </div>
     <div class="table">
-      <el-table :data="tableData" border style="width: 100%" height="550">
+      <el-table :data="tableData" border style="width: 100%">
         <el-table-column prop="id" label="id"></el-table-column>
         <el-table-column prop="name" label="用户姓名"></el-table-column>
         <el-table-column prop="weidi" label="考核维度"></el-table-column>
@@ -57,7 +57,9 @@
       </div>
       <div class="input-list">
         <div class="input-item">
-          <label class="title">不通过原因</label>
+          <div class="item-textarea-label">
+            <label class="title">不通过原因</label>
+          </div>
           <el-input type="textarea" placeholder="请输入内容"></el-input>
         </div>
       </div>

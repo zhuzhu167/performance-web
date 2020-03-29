@@ -83,9 +83,9 @@ export default {
   color: #333;
   line-height: 60px;
 }
-.el-main {
+/* .el-main {
   overflow: hidden;
-}
+} */
 
 .el-aside {
   color: #333;

@@ -49,7 +49,9 @@
       </div>
       <div class="input-list">
         <div class="input-item">
-          <label class="title" style="margin-bottom: 17px;">评估标准</label>
+          <div class="item-textarea-label">
+            <label class="title">评估标准</label>
+          </div>
           <el-input type="textarea" :rows="2" placeholder="请输入内容"></el-input>
         </div>
       </div>
