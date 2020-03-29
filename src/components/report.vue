@@ -139,8 +139,8 @@
       </tr>
       <tr>
         <td>关键事件加减分项</td>
-        <td></td>
-        <td colspan="7"></td>
+        <td>请填写部门考核指标</td>
+        <td colspan="7">衡量关键事件奖惩</td>
         <td></td>
         <td></td>
         <td></td>
