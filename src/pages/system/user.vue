@@ -123,11 +123,7 @@ export default {
           label: "实习"
         }
       ],
-      value: "",
-      isadd: false,
-      ismod: false,
-      iscomf: false,
-      msg: ""
+      value: ""
     };
   },
   methods: {

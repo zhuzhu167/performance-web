@@ -47,11 +47,7 @@ export default {
       isreport: false
     };
   },
-  methods: {
-    openreport() {
-      this.isreport = true;
-    }
-  },
+  methods: {},
   components: {
     report
   }

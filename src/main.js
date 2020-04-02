@@ -6,9 +6,11 @@ import router from './router'
 import ElementUI from 'element-ui';
 import '../src/plugs/element-ui/css/index.css'
 import '../src/plugs/common/css/common.css'
+import mixin from '../src/util/mixin'
 
 Vue.config.productionTip = false
 Vue.use(ElementUI);
+Vue.mixin(mixin)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

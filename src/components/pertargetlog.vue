@@ -1,11 +1,11 @@
 <template>
   <div>
     <el-dialog
-      :title="msg"
-      :visible.sync="ismod"
+      :title="Msg"
+      :visible.sync="isMod"
       width="50%"
       center
-      :before-close="cancel"
+      :before-close="Cancel"
       :close-on-click-modal="false"
       :close-on-press-escape="false"
     >
@@ -82,9 +82,9 @@
         </div>
       </div>
       <span slot="footer" class="dialog-footer">
-        <el-button @click="cancel()">取 消</el-button>
-        <el-button type="primary" v-if="!isadd">提交</el-button>
-        <el-button type="primary" v-if="isadd">添加</el-button>
+        <el-button @click="Cancel">取 消</el-button>
+        <el-button type="primary" v-if="!isAdd">提交</el-button>
+        <el-button type="primary" v-if="isAdd">添加</el-button>
       </span>
     </el-dialog>
   </div>
@@ -92,7 +92,7 @@
 
 <script>
 export default {
-  props: ["isadd", "ismod", "msg"],
+  props: ["isAdd", "isMod", "Msg"],
   data() {
     return {
       options: [
@@ -105,13 +105,8 @@ export default {
     };
   },
   methods: {
-    mod(msg) {
-      this.$emit("update:isadd", true);
-      this.$emit("update:msg", msg);
-    },
-    cancel() {
-      this.$emit("update:isadd", false);
-      this.$emit("update:ismod", false);
+    Cancel() {
+      this.$emit("Cancel");
     }
   }
 };

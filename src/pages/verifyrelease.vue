@@ -118,32 +118,13 @@ export default {
           label: "未知"
         }
       ],
-      isadd: false,
-      ismod: false,
-      iscomf: false,
+
       isreport: false,
       msg: "",
       value: ""
     };
   },
-  methods: {
-    add(msg) {
-      this.isadd = true;
-      this.ismod = true;
-      this.msg = msg;
-    },
-    mod(msg) {
-      this.ismod = true;
-      this.msg = msg;
-    },
-    cancel() {
-      this.isadd = false;
-      this.ismod = false;
-    },
-    openreport() {
-      this.isreport = true;
-    }
-  },
+  methods: {},
   components: {
     report
   }

@@ -68,7 +68,7 @@
         <el-button type="primary">提交</el-button>
       </span>
     </el-dialog>
-    <alltargetlog :ismod.sync="ismod" :isadd.sync="isadd" :msg.sync="msg"></alltargetlog>
+    <alltargetlog @Cancel="cancel()" :isMod.sync="ismod" :isAdd.sync="isadd" :Msg.sync="msg"></alltargetlog>
     <el-dialog title="提示" :visible.sync="iscomf" width="30%" center>
       <span>是否确认删除</span>
       <span slot="footer" class="dialog-footer">
@@ -97,27 +97,10 @@ export default {
         }
       ],
       value: "",
-      isadd: false,
-      ismod: false,
-      iscomf: false,
-      msg: "",
       isver: false
     };
   },
   methods: {
-    add(msg) {
-      this.isadd = true;
-      this.ismod = true;
-      this.msg = msg;
-    },
-    mod(msg) {
-      this.ismod = true;
-      this.msg = msg;
-    },
-    cancel() {
-      this.isadd = false;
-      this.ismod = false;
-    },
     getadd(isadd) {
       this.add = isadd;
     },

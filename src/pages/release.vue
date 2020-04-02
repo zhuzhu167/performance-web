@@ -89,30 +89,13 @@ export default {
           label: "未知"
         }
       ],
-      isadd: false,
-      ismod: false,
-      iscomf: false,
-      msg: "",
+
       value: "",
       time1: "",
       time2: ""
     };
   },
-  methods: {
-    add(msg) {
-      this.isadd = true;
-      this.ismod = true;
-      this.msg = msg;
-    },
-    mod(msg) {
-      this.ismod = true;
-      this.msg = msg;
-    },
-    cancel() {
-      this.isadd = false;
-      this.ismod = false;
-    }
-  }
+  methods: {}
 };
 </script>
 <style scoped>

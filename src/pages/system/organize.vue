@@ -88,9 +88,7 @@ export default {
           label: "gris事业部"
         }
       ],
-      isadd: false,
-      ismod: false,
-      iscomf: false,
+
       value: "",
       msg: ""
     };

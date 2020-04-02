@@ -44,7 +44,7 @@
       layout="prev, pager, next"
       :total="200"
     ></el-pagination>
-    <pertargetlog :ismod.sync="ismod" :ismdd.sync="isadd" :msg.sync="msg"></pertargetlog>
+    <pertargetlog @Cancel="cancel" :isMod.sync="ismod" :isAdd.sync="isadd" :Msg.sync="msg"></pertargetlog>
     <el-dialog title="提示" :visible.sync="iscomf" width="30%" center>
       <span>是否确认删除</span>
       <span slot="footer" class="dialog-footer">
@@ -72,28 +72,10 @@ export default {
           label: "未知"
         }
       ],
-      value: "",
-      isadd: false,
-      ismod: false,
-      iscomf: false,
-      msg: ""
+      value: ""
     };
   },
-  methods: {
-    add(msg) {
-      this.isadd = true;
-      this.ismod = true;
-      this.msg = msg;
-    },
-    mod(msg) {
-      this.ismod = true;
-      this.msg = msg;
-    },
-    cancel() {
-      this.isadd = false;
-      this.ismod = false;
-    }
-  },
+  methods: {},
   components: {
     pertargetlog
   }
